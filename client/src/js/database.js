@@ -18,7 +18,7 @@ export const putDb = async (content) => {
   const contentDb = await openDB('jate', 1);
   const tx = contentDb.transaction('jate', 'readwrite');
   const store = tx.objectStore('jate');
-  const request = store.put({ content: content });
+  const request = store.put({ id: 1, value: content });
   const result = await request;
   console.log('🚀 - data saved to the database', result);
 };
@@ -33,7 +33,7 @@ export const getDb = async () => {
   const request = store.getAll();
   const result = await request;
   console.log('result.value', result);
-  return result;
+  return result?.value;
 };;
 
 initdb();
