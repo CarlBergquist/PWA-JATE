@@ -4,7 +4,7 @@
 
 Carl Bergquist
 
-## ## User Story
+## User Story
 
 ```md
 AS A developer
